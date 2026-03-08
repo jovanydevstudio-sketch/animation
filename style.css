@@ -20,13 +20,15 @@ body {
 
 main {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 50px;
-    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .container {
-       width: 400px;
+       width: 90%;
+       max-width: 400px;
        height: 450PX;
        background-color: whitesmoke;
        border-radius: 20px;
@@ -63,10 +65,10 @@ main {
     border-radius: 10px;
 }
 
-.containerend:hover, .containerend:active {
+.containerend:hover, .containerend:active, .container:focus {
     border: 5px solid black;
 }
-.container:hover, .container:active {
+.container:hover, .container:active, .container:focus {
     border: 5px solid black;
 }
 
@@ -87,13 +89,13 @@ main {
         transform: translate(0,0) rotate(0deg);
     }
     25%{
-        transform: translate(300px,0) rotate(90deg);
+        transform: translate(250px,0) rotate(90deg);
     }
     50%{
-        transform: translate(300px,300px) rotate(180deg);
+        transform: translate(250px,250px) rotate(180deg);
     }
     75%{
-        transform: translate(0,300px) rotate(270deg);
+        transform: translate(0,250px) rotate(270deg);
     }
     100%{
         transform: translate(0,0) rotate(360deg);
@@ -105,13 +107,13 @@ main {
         transform: translate(0,0) rotate(0deg);
     }
     25%{
-        transform: translate(300px,300px) rotate(90deg);
+        transform: translate(250px,250px) rotate(90deg);
     }
     50%{
-        transform: translate(300px,0) rotate(180deg);
+        transform: translate(250px,0) rotate(180deg);
     }
     75%{
-        transform: translate(0,300px) rotate(270deg);
+        transform: translate(0,250px) rotate(270deg);
     }
     100%{
         transform: translate(0,0);
@@ -146,7 +148,6 @@ main {
     main {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
     }
 }
 
