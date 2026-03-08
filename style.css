@@ -1,0 +1,152 @@
+body {
+    background-image: linear-gradient(320deg, black, #000000a7, #17161681);
+}
+
+.ani{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+.text{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.container {
+       width: 400px;
+       height: 450PX;
+       background-color: whitesmoke;
+       border-radius: 20px;
+       padding: 20px;
+       transition: 0.3s;
+}
+.containerend {
+       width: 400px;
+       height: 450PX;
+       background-color: whitesmoke;
+       border-radius: 20px;
+       padding: 20px;
+       transition: 0.3s;
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    background-color: #000708a8;
+    border-radius: 10px;
+}
+
+.box2 {
+    width: 70px;
+    height: 70px;
+    background-color: #000708a8;
+    border-radius: 10px;
+}
+
+.box3 {
+    width: 70px;
+    height: 70px;
+    background-color: #000708a8;
+    border-radius: 10px;
+}
+
+.containerend:hover, .containerend:active {
+    border: 5px solid black;
+}
+.container:hover, .container:active {
+    border: 5px solid black;
+}
+
+.container:hover .box {
+    animation: box 5s linear infinite;
+}
+.container:hover .box2 {
+    animation: box2 5s linear infinite;
+}
+.containerend:hover .box3 {
+    animation: box3 5s linear infinite;
+}
+
+
+
+@keyframes box {
+    0%{
+        transform: translate(0,0) rotate(0deg);
+    }
+    25%{
+        transform: translate(300px,0) rotate(90deg);
+    }
+    50%{
+        transform: translate(300px,300px) rotate(180deg);
+    }
+    75%{
+        transform: translate(0,300px) rotate(270deg);
+    }
+    100%{
+        transform: translate(0,0) rotate(360deg);
+    }
+}
+
+@keyframes box2 {
+    0%{
+        transform: translate(0,0) rotate(0deg);
+    }
+    25%{
+        transform: translate(300px,300px) rotate(90deg);
+    }
+    50%{
+        transform: translate(300px,0) rotate(180deg);
+    }
+    75%{
+        transform: translate(0,300px) rotate(270deg);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes box3 {
+    0%{
+        height: 70px;
+        width: 70px;
+    }
+    25%{
+        height: 120px;
+        width: 120px;
+    }
+    50%{
+        height: 70px;
+        width: 70px;
+    }
+    75%{
+        height: 120px;
+        width: 120px;
+    }
+    100%{
+        height: 70px;
+        width: 70px;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
